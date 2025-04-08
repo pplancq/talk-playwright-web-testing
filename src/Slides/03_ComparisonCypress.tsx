@@ -4,6 +4,8 @@ import { ListItem } from '@Front/components/ListItem';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
 
+import defaultClasses from './03_ComparisonCypress.module.scss';
+
 export const ComparisonCypressSlide = () => {
   return (
     <Slide>
@@ -35,31 +37,22 @@ export const ComparisonCypressSlide = () => {
       </Slide>
       <Slide autoAnimate>
         <Title variant="h2">Advantages and disadvantages</Title>
-        <Block
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-          }}
-        >
-          <Title variant="h3" style={{ gridColumn: '1' }}>
-            Playwright
-          </Title>
-          <List style={{ display: 'grid', gridTemplateColumns: 'subgrid' }}>
-            <ListItem fragment animation="fade-up" fragmentIndex={3} style={{ gridColumn: '1' }}>
+        <Block className={defaultClasses.grid}>
+          <Title variant="h3">Playwright</Title>
+          <List>
+            <ListItem fragment animation="fade-up" fragmentIndex={3}>
               <strong>Advantages</strong> Multi-browser support, parallel execution, robustness.
             </ListItem>
-            <ListItem fragment animation="fade-up" fragmentIndex={5} style={{ gridColumn: '1' }}>
+            <ListItem fragment animation="fade-up" fragmentIndex={5}>
               <em>Disadvantages</em> Learning curve for beginners, smaller community compared to Cypress.
             </ListItem>
           </List>
-          <Title variant="h3" style={{ gridColumn: '2', gridRow: '1' }}>
-            Cypress
-          </Title>
-          <List style={{ display: 'grid', gridTemplateColumns: 'subgrid' }}>
-            <ListItem fragment animation="fade-up" fragmentIndex={4} style={{ gridColumn: '2' }}>
+          <Title variant="h3">Cypress</Title>
+          <List>
+            <ListItem fragment animation="fade-up" fragmentIndex={4}>
               <strong>Advantages</strong> User-friendly interface, real-time debugging.
             </ListItem>
-            <ListItem fragment animation="fade-up" fragmentIndex={6} style={{ gridColumn: '2' }}>
+            <ListItem fragment animation="fade-up" fragmentIndex={6}>
               <em>Disadvantages</em> Limited to Chromium browsers, no native support for parallel execution.
             </ListItem>
           </List>
