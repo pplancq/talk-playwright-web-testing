@@ -4,11 +4,11 @@ import { ListItem } from '@Front/components/ListItem';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
 
-export const GettingStartedSlide = () => {
+export const IntroductionSlide = () => {
   return (
     <Slide>
       <Slide>
-        <Title variant="h2">Getting started with Playwright</Title>
+        <Title variant="h2">Introduction to Playwright</Title>
       </Slide>
       <Slide autoAnimate>
         <Title variant="h2">Why use Playwright?</Title>
