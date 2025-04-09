@@ -1,5 +1,6 @@
 {
-  "name": "playwright-web-testing",
+  "name": "@pplancq/playwright-web-testing",
+  "private": true,
   "version": "0.1.0",
   "license": "MIT",
   "description": "Exploring Strengths, Weaknesses, and Best Practices for Web Testing",

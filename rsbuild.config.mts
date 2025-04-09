@@ -23,6 +23,6 @@ export default defineConfig({
   },
   html: {
     template: './public/index.html',
-    favicon: './public/favicon.ico',
+    favicon: './public/playwright-logo.svg',
   },
 });
