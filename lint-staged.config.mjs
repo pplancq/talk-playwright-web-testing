@@ -1,5 +1,5 @@
-module.exports = {
-  '*.{js,jsx,mjs,ts,tsx}': 'eslint --fix',
+export default {
+  '*.{js,jsx,mjs,ts,tsx, mts}': 'eslint --fix',
   '*.{ts,tsx}': 'tsc-files --noEmit',
   '*.{scss,css}': 'stylelint --fix',
   '*.!(js|jsx|mjs|ts|tsx|scss|css)': 'prettier --write --ignore-unknown',
