@@ -35,7 +35,7 @@ export const BaseComponent = <C extends ElementType = 'div'>({
   fragment,
   fragmentIndex,
   className,
-  animation,
+  animation = 'fade-up',
   ...props
 }: BaseComponentProps<C>) => {
   return (

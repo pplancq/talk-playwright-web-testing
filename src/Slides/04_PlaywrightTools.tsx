@@ -23,9 +23,10 @@ export const PlaywrightToolsSlide = () => {
       <Slide autoAnimate>
         <Title variant="h3">CLI Mode</Title>
         <Paragraph>
-          The CLI mode is perfect for continuous integration (CI) environments, allowing you to run tests directly from
-          the command line. It offers numerous options such as running tests in headless mode, executing specific tests,
-          and selecting the browser, making it an essential tool for automated testing pipelines.
+          The CLI mode is perfect for <strong>continuous integration (CI)</strong> environments, allowing you to run
+          tests directly from the command line. It offers numerous options such as running tests in{' '}
+          <em>headless mode</em>, executing <em>specific tests</em>, and <em>selecting the browser</em>, making it an
+          essential tool for automated testing pipelines.
         </Paragraph>
         <Image src={playwrightCliGif} alt="Playwright CLI" fragment aria-hidden />
       </Slide>
@@ -35,18 +36,23 @@ export const PlaywrightToolsSlide = () => {
       <Slide autoAnimate>
         <Title variant="h3">UI Mode</Title>
         <Paragraph>
-          The UI mode allows you to explore, run, and debug tests with a time-travel experience. It displays all test
-          files in a sidebar, allowing you to run them individually and see detailed traces of each action.
+          The UI mode allows you to explore, <strong>run</strong>, and <strong>debug tests</strong> with a{' '}
+          <em>time-travel experience</em>. It displays all test files in a sidebar, allowing you to run them
+          individually and see detailed traces of each action.
         </Paragraph>
         <List className={defaultClasses.list}>
           <ListItem fragment>
-            Features
+            <strong>Features</strong>
             <List>
               <ListItem fragment>
-                Filter tests by name, project, tag, or execution status (passed, failed, skipped).
+                <em>Filter tests</em> by name, project, tag, or execution status (passed, failed, skipped).
               </ListItem>
-              <ListItem fragment>Timeline view of actions with DOM snapshots.</ListItem>
-              <ListItem fragment>Visual debugging of actions and DOM inspection.</ListItem>
+              <ListItem fragment>
+                <em>Timeline view</em> of actions with DOM snapshots.
+              </ListItem>
+              <ListItem fragment>
+                <em>Visual debugging</em> of actions and DOM inspection.
+              </ListItem>
             </List>
           </ListItem>
         </List>
@@ -61,15 +67,19 @@ export const PlaywrightToolsSlide = () => {
       <Slide autoAnimate>
         <Title variant="h3">Codegen</Title>
         <Paragraph>
-          Codegen automatically generates test code by recording actions performed in the browser. It's a great way to
-          quickly get started with tests.
+          Codegen <strong>automatically generates</strong> test code by <em>recording actions</em> performed in the
+          browser. It's a great way to quickly get started with tests.
         </Paragraph>
         <List className={defaultClasses.list}>
           <ListItem fragment>
-            Usage
+            <strong>Usage</strong>
             <List>
-              <ListItem fragment>Record actions and generate robust locators</ListItem>
-              <ListItem fragment>Automatic assertions for visibility, text, and element value</ListItem>
+              <ListItem fragment>
+                <em>Record actions</em> and generate robust locators
+              </ListItem>
+              <ListItem fragment>
+                <em>Automatic assertions</em> for visibility, text, and element value
+              </ListItem>
             </List>
           </ListItem>
         </List>
@@ -84,8 +94,8 @@ export const PlaywrightToolsSlide = () => {
       <Slide autoAnimate>
         <Title variant="h3">Trace</Title>
         <Paragraph>
-          The Trace Viewer is a GUI tool that allows you to explore traces recorded after running Playwright scripts.
-          Traces are useful for debugging failed tests in CI.
+          The Trace Viewer is a GUI tool that allows you to <strong>explore traces</strong> recorded after running
+          Playwright scripts. Traces are useful for <em>debugging failed tests in CI</em>.
         </Paragraph>
         <Image src={playwrightTraceGif} alt="Playwright CLI" height={450} fragment aria-hidden />
       </Slide>

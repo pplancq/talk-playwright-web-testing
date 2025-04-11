@@ -2,8 +2,30 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  > h3 {
+  > h4 {
+    display: flex;
     grid-row: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+      aspect-ratio: 1;
+    }
+
+    :global(#playwright) {
+      color: transparent;
+      background: linear-gradient(to right, #c36359 30%, #2f8b26 30%, #44af47);
+      background-clip: text;
+    }
+
+    :global(#cypress) {
+      color: transparent;
+      background: linear-gradient(to right, #1c1e2e 30%, #2c715d 30%, #75d0a6);
+      background-clip: text;
+    }
   }
 
   > ul {

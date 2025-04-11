@@ -10,7 +10,9 @@ export const MainTitleSlide = () => {
       </Slide>
       <Slide autoAnimate>
         <Title>Playwright for Web Testing</Title>
-        <Paragraph>Exploring Strengths, Weaknesses, and Best Practices for Web Testing</Paragraph>
+        <Paragraph>
+          Exploring <strong>Strengths</strong>, <em>Weaknesses</em>, and Best Practices for Web Testing
+        </Paragraph>
       </Slide>
     </>
   );

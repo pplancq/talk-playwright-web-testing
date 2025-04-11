@@ -28,6 +28,6 @@ export default defineConfig({
   },
   html: {
     template: './public/index.html',
-    favicon: './public/playwright-logo.svg',
+    favicon: './src/asset/playwright-logo.svg',
   },
 });
