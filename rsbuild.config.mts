@@ -27,7 +27,7 @@ export default defineConfig({
     open: (process.env.BROWSER ?? 'false') === 'true',
   },
   html: {
-    template: './public/index.html',
+    template: './index.html',
     favicon: './src/asset/playwright-logo.svg',
   },
 });
