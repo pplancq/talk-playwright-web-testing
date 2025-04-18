@@ -21,6 +21,12 @@ export default defineConfig({
     distPath: {
       root: 'build',
     },
+    copy: [
+      {
+        from: 'public',
+        to: '.',
+      },
+    ],
   },
   server: {
     port: parseInt(process.env.PORT ?? '3000', 10),

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Playwright Demo</title>
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/dracula.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #282a36;
+        color: #f8f8f2;
+      }
+      .form-container {
+        background: #44475a;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+      .form-container h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
+        color: var(--r-heading-color);
+      }
+      .form-container label[for='email'] {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        cursor: pointer;
+        gap: 16px;
+      }
+      .form-container input[type='email'] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #6272a4;
+        border-radius: 4px;
+        background-color: #282a36;
+        color: #f8f8f2;
+        font-size: 1em;
+      }
+      .form-container input[type='email']::placeholder {
+        color: #6272a4;
+      }
+      .form-container input[type='email']:focus {
+        outline: none;
+        border-color: #50fa7b;
+      }
+      .form-container label[for='subscribe'] {
+        display: block;
+        height: 26px;
+        cursor: pointer;
+        margin-bottom: 15px;
+      }
+      .form-container label[for='subscribe'] span {
+        display: inline-block;
+        position-anchor: --anchor-el;
+        position: absolute;
+        top: anchor(top);
+        left: calc(anchor(right) + 8px);
+        height: 20px;
+        line-height: 20px;
+      }
+      .form-container input[type='checkbox'] {
+        all: unset;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #6272a4;
+        border-radius: 4px;
+        background-color: #282a36;
+        position: relative;
+        anchor-name: --anchor-el;
+      }
+      .form-container input[type='checkbox'] + svg {
+        display: none;
+        position-anchor: --anchor-el;
+        position: absolute;
+        top: anchor(top);
+        left: anchor(left);
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: #50fa7b;
+        stroke-width: 3px;
+        border: 1px solid transparent;
+      }
+      .form-container input[type='checkbox']:checked {
+        border-color: #50fa7b;
+      }
+      .form-container input[type='checkbox']:checked + svg {
+        display: block;
+      }
+      .form-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #6272a4;
+        border: none;
+        border-radius: 4px;
+        color: #f8f8f2;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      .form-container button:hover {
+        background-color: #50fa7b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Subscribe to newsletter</h1>
+      <form>
+        <label for="email">
+          Email:
+          <input type="email" id="email" name="email" placeholder="Enter your email" />
+        </label>
+
+        <label for="subscribe">
+          <input type="checkbox" id="subscribe" name="subscribe" />
+          <svg viewBox="0 0 24 24">
+            <path d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>I agree to the terms and conditions</span>
+        </label>
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </body>
+</html>
