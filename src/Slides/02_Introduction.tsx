@@ -1,5 +1,7 @@
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { MarkdownBlock } from '@Front/components/MardownBlock';
+import { Note } from '@Front/components/Note';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
 
@@ -26,6 +28,12 @@ export const IntroductionSlide = () => {
             It is designed to be robust, fast, and <em>easy to use</em>.
           </ListItem>
         </List>
+        <Note>
+          <MarkdownBlock>{`### Pourquoi utiliser Playwright ?
+- Playwright est un outil open-source développé par Microsoft pour les tests de bout en bout des applications web.
+- Il prend en charge plusieurs navigateurs (Chromium, Firefox, WebKit) et permet des tests fiables et rapides.
+- Il est conçu pour être robuste, rapide et facile à utiliser.`}</MarkdownBlock>
+        </Note>
       </Slide>
       <Slide autoAnimate autoAnimateRestart>
         <Title variant="h3">What can you do with Playwright?</Title>
@@ -52,6 +60,15 @@ export const IntroductionSlide = () => {
             Analyze <em>code coverage</em> to ensure comprehensive test coverage.
           </ListItem>
         </List>
+        <Note>
+          <MarkdownBlock>{`### Que pouvez-vous faire avec Playwright ?
+- Automatiser les interactions utilisateur sur les navigateurs web.
+- Effectuer des tests de bout en bout et des tests d'intégration.
+- Réaliser des tests unitaires (via Playwright Component, actuellement expérimental).
+- Exécuter des tests d'accessibilité pour garantir que les applications web sont utilisables par tous.
+- Mettre en œuvre des tests de régression visuelle pour détecter les changements d'interface utilisateur.
+- Analyser la couverture du code pour garantir une couverture de test complète.`}</MarkdownBlock>
+        </Note>
       </Slide>
     </Slide>
   );

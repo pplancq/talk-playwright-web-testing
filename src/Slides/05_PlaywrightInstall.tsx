@@ -4,6 +4,8 @@ import { CodeBlock } from '@Front/components/CodeBlock';
 import { Image } from '@Front/components/Image';
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { MarkdownBlock } from '@Front/components/MardownBlock';
+import { Note } from '@Front/components/Note';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
 
@@ -38,6 +40,14 @@ export const PlaywrightInstallSlide = () => {
             </List>
           </ListItem>
         </List>
+
+        <Note>
+          <MarkdownBlock>{`### Prérequis d'installation
+- **Installer Node via Volta** :
+    - Installer Volta : \`winget install Volta.Volta\` ou \`curl https://get.volta.sh | bash\`
+    - Installer Node.js : \`volta install node@22\`
+    - Verrouiller la version de Node.js pour le projet : \`volta pin node@18\``}</MarkdownBlock>
+        </Note>
       </Slide>
       <Slide autoAnimate autoAnimateRestart>
         <Title variant="h3">Starting a Playwright Test Project</Title>
@@ -54,6 +64,11 @@ export const PlaywrightInstallSlide = () => {
           </ListItem>
         </List>
         <Image src={playwrightConfig} aria-hidden height={350} fragment />
+        <Note>
+          <MarkdownBlock>{`### Démarrer un projet de test Playwright
+- **Installer Playwright** : \`npm init playwright@latest\`
+- **Configurer Playwright** : \`playwright.config.ts\` pour définir les navigateurs, les répertoires de tests, etc.`}</MarkdownBlock>
+        </Note>
       </Slide>
       <Slide autoAnimate autoAnimateRestart>
         <Title variant="h3">Writing and Running a Test</Title>
@@ -80,6 +95,20 @@ test('has title', async ({ page }) => {
 });`}</CodeBlock>
           </ListItem>
         </List>
+        <Note>
+          <MarkdownBlock>{`### Écrire et exécuter un test
+- **Exécution en mode CLI** : \`npx playwright test\`
+- **Exécution en mode UI** : \`npx playwright test --ui\`
+- **Exemple de test** :
+  \`\`\`typescript
+  import { test, expect } from '@playwright/test';
+
+  test('a un titre', async ({ page }) => {
+    await page.goto('https://playwright.dev/');
+    await expect(page).toHaveTitle(/Playwright/);
+  });
+  \`\`\``}</MarkdownBlock>
+        </Note>
       </Slide>
     </Slide>
   );

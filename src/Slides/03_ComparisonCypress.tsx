@@ -3,6 +3,8 @@ import playwrightLogo from '@Front/asset/playwright-logo.svg';
 import { Block } from '@Front/components/Block';
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { MarkdownBlock } from '@Front/components/MardownBlock';
+import { Note } from '@Front/components/Note';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
 import { Svg } from '@pplancq/svg-react';
@@ -34,6 +36,12 @@ export const ComparisonCypressSlide = () => {
             case for Cypress without additional configurations.
           </ListItem>
         </List>
+        <Note>
+          <MarkdownBlock>{`### Principales différences
+- **Support des navigateurs** : Playwright prend en charge Chromium, Firefox et WebKit, tandis que Cypress se concentre principalement sur les navigateurs basés sur Chromium.
+- **Langages pris en charge** : Playwright prend en charge plusieurs langages (JS, TS, Python, C#, Java), alors que Cypress est limité à JavaScript et TypeScript.
+- **Exécution parallèle** : Playwright prend en charge nativement l'exécution parallèle des tests, ce qui n'est pas le cas de Cypress sans configurations supplémentaires.`}</MarkdownBlock>
+        </Note>
       </Slide>
       <Slide autoAnimate autoAnimateRestart>
         <Title variant="h3">Advantages and disadvantages</Title>
@@ -66,6 +74,15 @@ export const ComparisonCypressSlide = () => {
             </ListItem>
           </List>
         </Block>
+        <Note>
+          <MarkdownBlock>{`### Avantages et inconvénients
+- **Playwright** :
+    - **Avantages** : Support multi-navigateurs, exécution parallèle, robustesse.
+    - **Inconvénients** : Courbe d'apprentissage pour les débutants, communauté plus petite comparée à Cypress.
+- **Cypress** :
+    - **Avantages** : Interface conviviale, débogage en temps réel.
+    - **Inconvénients** : Limité aux navigateurs Chromium, pas de support natif pour l'exécution parallèle.`}</MarkdownBlock>
+        </Note>
       </Slide>
     </Slide>
   );

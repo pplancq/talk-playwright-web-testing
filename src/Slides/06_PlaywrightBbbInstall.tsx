@@ -1,6 +1,8 @@
 import { CodeBlock } from '@Front/components/CodeBlock';
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { MarkdownBlock } from '@Front/components/MardownBlock';
+import { Note } from '@Front/components/Note';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
 
@@ -38,6 +40,25 @@ export default defineConfig({
   testDir,
   reporter: 'html',
 });`}</CodeBlock>
+        <Note>
+          <MarkdownBlock>{`### Installation de Playwright BDD
+- **Installer** : \`npm i -D playwright-bdd\`
+- **Mettre à jour playwright.config.ts** :
+  \`\`\`typescript
+  import { defineConfig } from '@playwright/test';
+  import { defineBddConfig } from 'playwright-bdd';
+
+  const testDir = defineBddConfig({
+    features: 'sample.feature',
+    steps: 'steps.js',
+  });
+
+  export default defineConfig({
+    testDir,
+    reporter: 'html',
+  });
+  \`\`\``}</MarkdownBlock>
+        </Note>
       </Slide>
     </Slide>
   );

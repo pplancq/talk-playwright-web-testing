@@ -1,4 +1,6 @@
 import { CodeBlock } from '@Front/components/CodeBlock';
+import { MarkdownBlock } from '@Front/components/MardownBlock';
+import { Note } from '@Front/components/Note';
 import { Paragraph } from '@Front/components/Paragraph';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
@@ -23,6 +25,18 @@ export const WriteFirstBddTestSlide = () => {
         Given I am on home page
         When I click link "Get started"
         Then I see in title "Installation"`}</CodeBlock>
+        <Note>
+          <MarkdownBlock>{`### Créer un fichier feature
+- **Créer un fichier feature nommé \`sample.feature\`** :
+  \`\`\`
+  Fonctionnalité : Site Playwright
+
+  Scénario : Vérifier le lien "Get started"
+    Étant donné que je suis sur la page d'accueil
+    Quand je clique sur le lien "Get started"
+    Alors je vois dans le titre "Installation"
+  \`\`\``}</MarkdownBlock>
+        </Note>
       </Slide>
       <Slide autoAnimate autoAnimateRestart>
         <Title variant="h3">Implement steps</Title>
@@ -49,6 +63,26 @@ When('I click link {string}', async ({ page }, name) => {
 Then('I see in title {string}', async ({ page }, keyword) => {
   await expect(page).toHaveTitle(new RegExp(keyword));
 });`}</CodeBlock>
+        <Note>
+          <MarkdownBlock>{`### Implémenter les étapes
+- **Implémenter les étapes dans \`steps.js\`** :
+  \`\`\`typescript
+  import { expect } from '@playwright/test';
+  import { createBdd } from 'playwright-bdd';
+
+  const { Given, When, Then } = createBdd();
+
+  Given('je suis sur la page d\\'accueil', async ({ page }) => {
+    await page.goto('https://playwright.dev');
+  });
+  When('je clique sur le lien {string}', async ({ page }, name) => {
+    await page.getByRole('link', { name }).click();
+  });
+  Then('je vois dans le titre {string}', async ({ page }, keyword) => {
+    await expect(page).toHaveTitle(new RegExp(keyword));
+  });
+  \`\`\``}</MarkdownBlock>
+        </Note>
       </Slide>
     </Slide>
   );

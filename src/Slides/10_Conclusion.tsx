@@ -1,5 +1,7 @@
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { MarkdownBlock } from '@Front/components/MardownBlock';
+import { Note } from '@Front/components/Note';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
 
@@ -28,6 +30,14 @@ export const ConclusionSlide = () => {
             Integration with <strong>Playwright BDD</strong> allows for <em>Gherkin-based</em> tests.
           </ListItem>
         </List>
+        <Note>
+          <MarkdownBlock>{`### Résumé des points clés
+- Playwright est un outil robuste, rapide et facile à utiliser pour les tests de bout en bout.
+- Il prend en charge plusieurs navigateurs : Chromium, Firefox, WebKit.
+- La comparaison avec Cypress met en évidence ses forces et faiblesses.
+- Playwright propose des outils puissants comme le mode CLI, le mode UI, Codegen et Trace Viewer.
+- L'intégration avec Playwright BDD permet des tests basés sur Gherkin.`}</MarkdownBlock>
+        </Note>
       </Slide>
 
       <Slide autoAnimate autoAnimateRestart>
@@ -42,6 +52,11 @@ export const ConclusionSlide = () => {
             landscape.
           </ListItem>
         </List>
+        <Note>
+          <MarkdownBlock>{`### Dernières réflexions
+- Playwright est un outil polyvalent qui peut améliorer considérablement votre flux de travail de test.
+- Son support multi-navigateurs et ses fonctionnalités puissantes en font un acteur majeur dans le domaine des tests.`}</MarkdownBlock>
+        </Note>
       </Slide>
     </Slide>
   );
