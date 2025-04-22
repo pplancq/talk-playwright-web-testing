@@ -55,36 +55,37 @@
         border-color: #50fa7b;
       }
       .form-container label[for='subscribe'] {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        display: block;
+        height: 20px;
         cursor: pointer;
         margin-bottom: 15px;
-        height: 20px;
-      }
-      .form-container #checkbox {
-        position: relative;
       }
       .form-container label[for='subscribe'] span {
         display: inline-block;
+        position-anchor: --anchor-el;
+        position: absolute;
+        top: anchor(top);
+        left: calc(anchor(right) + 8px);
         height: 20px;
         line-height: 20px;
       }
       .form-container input[type='checkbox'] {
         all: unset;
-        display: block;
+        display: inline-block;
         width: 18px;
         height: 18px;
         border: 1px solid #6272a4;
         border-radius: 4px;
         background-color: #282a36;
         position: relative;
+        anchor-name: --anchor-el;
       }
-      .form-container #checkbox svg {
+      .form-container input[type='checkbox'] + svg {
         display: none;
+        position-anchor: --anchor-el;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: anchor(top);
+        left: anchor(left);
         width: 18px;
         height: 18px;
         fill: none;
@@ -95,7 +96,7 @@
       .form-container input[type='checkbox']:checked {
         border-color: #50fa7b;
       }
-      .form-container #checkbox:has(input[type='checkbox']:checked) svg {
+      .form-container input[type='checkbox']:checked + svg {
         display: block;
       }
       .form-container button {
@@ -123,12 +124,10 @@
         </label>
 
         <label for="subscribe">
-          <div id="checkbox">
-            <input type="checkbox" id="subscribe" name="subscribe" />
-            <svg viewBox="0 0 24 24">
-              <path d="M5 13l4 4L19 7"></path>
-            </svg>
-          </div>
+          <input type="checkbox" id="subscribe" name="subscribe" />
+          <svg viewBox="0 0 24 24">
+            <path d="M5 13l4 4L19 7"></path>
+          </svg>
           <span>I agree to the terms and conditions</span>
         </label>
 
