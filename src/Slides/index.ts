@@ -10,6 +10,7 @@ import { UsefulCommandsSlide } from '@Front/Slides/09_UsefulCommands';
 import { ConclusionSlide } from '@Front/Slides/10_Conclusion';
 import { WhatNextSlide } from '@Front/Slides/11_WhatNext';
 import { DemoEffectSlide } from '@Front/Slides/DemoEffect';
+import { ThankSlide } from '@Front/Slides/Thank';
 import { type ComponentType } from 'react';
 
 export const slides = [
@@ -26,4 +27,5 @@ export const slides = [
   UsefulCommandsSlide,
   ConclusionSlide,
   WhatNextSlide,
+  ThankSlide,
 ] as ComponentType[];
