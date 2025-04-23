@@ -1,0 +1,10 @@
+.slide {
+  position: relative;
+
+  & > img {
+    position: absolute;
+    top: -75px;
+    right: 200px;
+    width: 120px;
+  }
+}
