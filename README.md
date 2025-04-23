@@ -1,111 +1,77 @@
-# Reveal.js react template
+# Playwright Presentation
 
-This project is a ready-to-use template for creating presentations using reveal.js, preconfigured with React.
+[![Build](https://github.com/pplancq/playwright-web-testing/actions/workflows/build.yaml/badge.svg)](https://github.com/pplancq/playwright-web-testing/actions/workflows/build.yaml)
+![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
-## Prerequisites
+[![Demo](https://img.shields.io/badge/slide-online-blue)](https://pplancq.github.io/playwright-web-testing/)
 
-List of prerequisites to use this template:
+This project contains an interactive presentation about Playwright, a powerful tool for end-to-end testing.
+It also includes a demo for visual regression testing.
 
-- Node.js
-- npm
+## Context
 
-## Using the Template
+This presentation was delivered as part of a Playwright discovery session within my team at AXA France.
+It aims to introduce key concepts, features, and benefits of Playwright for automated testing.
 
-### 1. Create a new repo from the template
+## Access the Presentation
 
-Click the **"Use this template"** button on the GitHub page of this repo to create a new repository based on this template.
+The presentation is available online at the following URL:  
+[https://pplancq.github.io/playwright-web-testing/](https://pplancq.github.io/playwright-web-testing/)
 
-### 2. Clone the new repo
+## Visual Regression Testing Demo
 
-Clone the repo you just created:
+The project includes a visual regression testing demo using Playwright.
+The base test verifies the `/demo` page and compares a screenshot with a reference snapshot.
+
+### Command to Run the Test
+
+To run the visual regression test, use the following command:
 
 ```bash
-git clone https://github.com/<your-username>/<your-new-repo>.git
-cd <your-new-repo>
+npx playwright test
 ```
 
-### 3. Install dependencies
+### Expected Behavior
 
-Install the necessary dependencies:
+- **Page `/demo`**: The test passes if the page matches the expected snapshot.
+- **Page `/demo2`**: If you modify the test to target the `/demo2` page, you will observe a visual regression.
+  This regression is caused by the absence of the CSS `anchor` API in Firefox.
+
+## Tech Stack
+
+The project uses the following technologies:
+
+- **[![Reveal.js](https://img.shields.io/badge/reveal.js-5.2.1-green)](https://revealjs.com/)**: Framework for creating interactive presentations.
+- **[![React](https://img.shields.io/badge/react-19.1.0-blue)](https://reactjs.org/)**: JavaScript library for building user interfaces.
+- **[![TypeScript](https://img.shields.io/badge/typescript-5.8.3-blue)](https://www.typescriptlang.org/)**: Typed superset of JavaScript.
+- **[![Playwright](https://img.shields.io/badge/playwright-1.52.0-orange)](https://playwright.dev/)**: Framework for end-to-end testing.
+- **[![rsbuild](https://img.shields.io/badge/rsbuild-1.3.9-purple)](https://github.com/rsbuild/rsbuild)**: Build tool for development and production.
+
+## Clone and Run the Project
+
+To clone the repository and run the project locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/pplancq/playwright-web-testing.git
+cd playwright-web-testing
+```
+
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-### 4. Start the development server
-
-Start the development server to see your presentation in action:
+3. Start the project in development mode:
 
 ```bash
 npm start
 ```
 
-Open your browser and go to `http://localhost:3000` to view your presentation.
-
-## Project Structure
-
-Brief description of the project structure:
-
-- `src/` : Contains the application's source code.
-- `src/Config/reveal.ts` : Contains the configuration for reveal.js. For more information, see the [reveal.js documentation](https://revealjs.com/config/).
-- `src/Slides/` : Contains the presentation slides. Slides should be included in `src/Slides/index.ts`.
-
-### Example Slide
-
-```typescript
-// src/Slides/Example.tsx
-import { Note } from '@Front/components/Note';
-import { Paragraph } from '@Front/components/Paragraph';
-import { Slide } from '@Front/components/Slide';
-import { Title } from '@Front/components/Title';
-
-export const BasicSlide = () => {
-  return (
-    <Slide>
-      <Title variant="h2">Basic Slide</Title>
-      <Paragraph>This slide uses the reveal.js framework</Paragraph>
-      <Paragraph>
-        Press "f" to enter full screen mode, and press "s" to enter speaker mode. Use arrow keys to navigate between slides.
-      </Paragraph>
-      <Note>This is a note. You can use it to provide additional information to the audience.</Note>
-    </Slide>
-  );
-};
-```
-
-```typescript
-// src/Slides/index.ts
-import { BasicSlide } from '@Front/Slides/BasicSlide';
-import { type ComponentType } from 'react';
-
-export const slides = [BasicSlide] as ComponentType[];
-```
-
-## Useful Commands
-
-- **Build the project:**
-
-```bash
-npm run build
-```
-
-- **Run Prettier and ESLint:**
-
-```bash
-npm run lint
-```
-
-## Deployment on GitHub Pages
-
-The template includes a GitHub Action to publish on GitHub Pages. To use it, simply change the URL in the `package.json` under the `homepage` key.
-
-## Customization
-
-How to customize the template for your needs:
-
-- Modify the files in `src/` to adjust the content of your slides.
-- Use React components to add interactive features.
-- More information on how to use reveal.js can be found in the [reveal.js documentation](https://revealjs.com/).
+4. Open the presentation in your browser at the following address:  
+   [http://localhost:3000](http://localhost:3000)
 
 ## License
 
