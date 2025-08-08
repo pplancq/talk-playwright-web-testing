@@ -24,7 +24,7 @@
   },
   "homepage": "https://pplancq.github.io/talk-playwright-web-testing",
   "dependencies": {
-    "@pplancq/svg-react": "^2.1.0",
+    "@pplancq/svg-react": "^2.1.1",
     "clsx": "^2.1.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
