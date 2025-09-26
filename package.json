@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
-    "@playwright/test": "^1.55.0",
+    "@playwright/test": "^1.55.1",
     "@pplancq/commitlint-config": "^2.2.3",
     "@pplancq/eslint-config": "^5.0.5",
     "@pplancq/postcss-config": "^2.1.15",
