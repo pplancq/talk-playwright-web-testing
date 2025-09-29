@@ -39,7 +39,7 @@
     "@pplancq/prettier-config": "^1.2.7",
     "@pplancq/stylelint-config": "^4.0.4",
     "@rsbuild/core": "^1.5.12",
-    "@rsbuild/plugin-react": "^1.4.0",
+    "@rsbuild/plugin-react": "^1.4.1",
     "@rsbuild/plugin-sass": "^1.4.0",
     "@types/node": "^22.18.6",
     "@types/react": "^19.1.13",
