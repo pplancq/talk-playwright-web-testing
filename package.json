@@ -41,7 +41,7 @@
     "@rsbuild/core": "^1.6.14",
     "@rsbuild/plugin-react": "^1.4.2",
     "@rsbuild/plugin-sass": "^1.4.0",
-    "@types/node": "^24.10.2",
+    "@types/node": "^24.10.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@types/reveal.js": "^5.2.2",
@@ -57,7 +57,7 @@
     "typescript": "^5.9.3"
   },
   "volta": {
-    "node": "24.11.1",
+    "node": "24.12.0",
     "npm": "11.7.0"
   }
 }
