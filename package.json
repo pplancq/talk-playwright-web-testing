@@ -41,7 +41,7 @@
     "@pplancq/stylelint-config": "^4.1.0",
     "@rsbuild/core": "^1.7.2",
     "@rsbuild/plugin-react": "^1.4.3",
-    "@rsbuild/plugin-sass": "^1.4.1",
+    "@rsbuild/plugin-sass": "^1.5.0",
     "@types/node": "^24.10.9",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
